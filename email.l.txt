@@ -1,0 +1,22 @@
+%{
+%}
+
+%%
+
+^[a-zA-Z0-9][a-zA-Z0-9.-_]*@[a-zA-Z]+(\.[a-zA-Z]+)+$ {
+printf("Give Input is a valid Email");
+}
+
+.+ {
+printf("Give input is not a valid Email");
+}
+
+%%
+
+int main(){
+printf("Enter the Email : \n");
+yylex();
+}
+
+int yywrap(){
+}
